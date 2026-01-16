@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Testing'){
             steps{
-                bat "npi i"
+                bat "C:\cypress\cypress-e2e-framework>npm i"
                 bat "npx cypress run --browser ${Browser} --spec ${SPEC}"
             }
         }
