@@ -1,0 +1,34 @@
+pipeline {
+    agent{
+        any
+    }
+    parameters{
+        string(name: "SPEC", defaultValue: "cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js", description: "Ej: cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser chrome")
+        choice(name:"Browser", choices:['chrome', 'edge', 'firefox'], description: "Select browser")
+    }
+    options{
+        ansiColor('xterm')
+    }
+    stages{
+        stage('Build'){
+            steps{
+                echo "Building application"
+            }
+        }
+        stage('Testing'){
+            steps{
+                bat "npi i"
+                bat "npx cypress run --browser ${Browser} --spec ${SPEC}"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo "Deploying app"
+            }
+        }
+
+    }
+    post{
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'cypress/Reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+    }
+}
