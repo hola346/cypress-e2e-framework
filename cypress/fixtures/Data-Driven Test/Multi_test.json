@@ -1,0 +1,26 @@
+[
+{
+    "testname": "Login_OK",
+    "User": "standard_user",
+    "Pass": "secret_sauce",
+    "Expect": "Products"
+},
+{
+    "testname": "Login_Blocked_user",
+    "User": "locked_out_user",
+    "Pass": "secret_sauce",
+    "Expect": "this user has been locked out"
+}, 
+{
+    "testname": "Login_Wrong user",
+    "User": "AAAA",
+    "Pass": "secret_sauce",
+    "Expect": "Username and password do not match"
+},
+{
+    "testname": "Login_empty_password",
+    "User": "standard_user",
+    "Pass": "sauce",
+    "Expect": "Username and password do not match"
+}
+]

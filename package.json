@@ -1,0 +1,30 @@
+{
+  "name": "cypress-e2e-framework",
+  "version": "1.0.0",
+  "description": "E2E framework Testing Cypress",
+  "keywords": [
+    "e2e",
+    "framework",
+    "automation",
+    "cypress"
+  ],
+  "license": "ISC",
+  "author": "bofifa",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cy:open": "cypress open --browser chrome --e2e",
+    "cypress:retry-ab": "cypress run --spec cypress/e2e/retry-ability/*",
+    "cypress:retry-ab-chrome": "cypress run --headless --spec cypress/e2e/retry-ability/* --browser chrome",
+    "cy:runARRAY": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser chrome",
+    "cypress:chrome": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser chrome",
+    "cypress:edge": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser edge"
+  },
+  "devDependencies": {
+    "cypress": "^15.8.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
