@@ -15,12 +15,13 @@
   "scripts": {
     "test": "test",
     "cypress:open": "cypress open",
-    "cy:open": "cypress open --browser chrome --e2e",
+    "cy:open": "cypress open --browser edge --e2e",
     "cypress:retry-ab": "cypress run --spec cypress/e2e/retry-ability/*",
     "cypress:retry-ab-chrome": "cypress run --headless --spec cypress/e2e/retry-ability/* --browser chrome",
     "cy:runARRAY": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser chrome",
     "cypress:chrome": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser chrome",
-    "cypress:edge": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser edge"
+    "cypress:edge": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser edge",
+    "cypress:firefox": "cypress run --spec cypress/e2e/saucedemo/Objects-ARRAY-Saucedemo/*.cy.js --browser firefox"
   },
   "devDependencies": {
     "cypress": "^15.8.1",
