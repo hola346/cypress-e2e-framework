@@ -63,4 +63,3 @@ it('Wrap calling', () => {
     cy.log("WRAP: "+ this.WrapText) // both are the same
 
 });
-
